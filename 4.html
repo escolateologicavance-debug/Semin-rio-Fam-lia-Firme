@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Conflitos | Seminário Família Firme</title>
+    <style>
+        body { font-family: 'Georgia', serif; background: #f7f7f7; margin: 0; padding: 0; color: #1a1a1a; }
+        header { background: #111; color: #d4af37; text-align: center; padding: 30px; border-bottom: 5px solid #7b0000; }
+        .sub { font-size: 14px; color: #ccc; letter-spacing: 2px; text-transform: uppercase; }
+        .container { max-width: 800px; margin: 20px auto; background: white; padding: 40px; box-shadow: 0 0 20px rgba(0,0,0,0.1); }
+        h1 { color: #7b0000; border-bottom: 1px solid #ddd; padding-bottom: 10px; }
+        h2 { color: #111; margin-top: 30px; border-left: 4px solid #d4af37; padding-left: 15px; }
+        
+        .media-bar { background: #eee; padding: 10px; display: flex; justify-content: center; gap: 10px; margin-bottom: 20px; border-radius: 4px; }
+        .btn-media { background: white; border: 1px solid #ccc; padding: 8px 15px; cursor: pointer; display: flex; align-items: center; font-weight: bold; font-size: 13px; }
+        .btn-media:active { background: #ddd; }
+
+        .libras-container { background: #f9f9f9; border: 1px solid #ddd; padding: 15px; margin: 20px 0; border-radius: 8px; text-align: center; }
+        .verso { background: #fff4f4; border-left: 6px solid #7b0000; padding: 25px; margin: 25px 0; font-style: italic; font-size: 18px; }
+        .original-content { line-height: 1.8; text-align: justify; color: #222; }
+        .original-content b { color: #7b0000; }
+        
+        .nav { text-align: center; margin-top: 40px; }
+        .nav a { background: #111; color: #d4af37; padding: 12px 25px; text-decoration: none; border-radius: 4px; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<header>
+    SEMINÁRIO FAMÍLIA FIRME
+    <div class="sub">Formação Bíblica para a Família Cristã</div>
+</header>
+
+<div class="container">
+    <div class="media-bar">
+        <button class="btn-media" onclick="lerTexto()">▶ OUVIR AULA (Google)</button>
+        <button class="btn-media" onclick="pararLeitura()">⏹ PARAR</button>
+    </div>
+
+    <h1>Gestão de Conflitos: A Engenharia do Perdão</h1>
+
+    <div class="libras-container">
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div>
+        </div>
+        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+        <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+        <p style="font-size: 12px; color: #666;">Tradução LIBRAS ativa</p>
+    </div>
+
+    <div id="texto-estudo" class="original-content">
+        <p>
+            O conflito no casamento não é um sinal de falência, mas um sintoma de <b>ajuste estrutural</b>. Uma família que nunca diverge é uma família que não cresce, pois a colisão de duas vontades é o que lapida o caráter cristão. No entanto, o problema reside na <b>transmutação da divergência em hostilidade</b>.
+        </p>
+
+        <div class="verso">
+            "Irai-vos, e não pequeis; não se ponha o sol sobre a vossa ira."
+            <br><br><strong>Efésios 4:26</strong>
+            <br><a href="https://www.bibliaonline.com.br/acf/ef/4/26" target="_blank" style="color:#7b0000; font-size:14px;">[Abrir Texto Sagrado]</a>
+        </div>
+
+        <h2>A Anatomia da Ira e o Domínio Próprio</h2>
+        <p>
+            A ira é uma emoção reativa, mas o <b>pecado</b> é uma escolha volitiva. Quando Paulo nos exorta a não deixar o sol se pôr sobre a ira, ele estabelece uma <b>cronologia para a reconciliação</b>. O conflito acumulado gera um resíduo tóxico na alma, transformando a admiração em desprezo. Na psicanálise de Freud, vemos que o que não é resolvido é repetido. Na Família Cristã, o que não é perdoado torna-se um ídolo de amargura.
+        </p>
+
+        <h2>A Falácia da Vitória no Argumento</h2>
+        <p>
+            Em um conflito conjugal, quando um "vence" a discussão, <b>ambos perdem a comunhão</b>. O objetivo do diálogo em crise não é o veredito, mas a restauração da ponte. Como seres dotados de uma boca e dois ouvidos, a nossa arquitetura convida à recepção antes da emissão. O grito é o recurso de quem sente que não está sendo ouvido; a mansidão, por outro lado, é a <b>autoridade do espírito</b> sobre a carne.
+        </p>
+
+        <p>
+            Se utilizarmos o pensamento de autores como Lacan sobre a "falta", entendemos que buscamos no outro o que nos falta, mas o conflito revela que o outro é um ser limitado e falho como nós. A aceitação dessa limitação é o que Max Lucado chama de "graça líquida". Sem o solvente do perdão, as engrenagens da convivência travam em um atrito destrutivo.
+        </p>
+
+        <div style="background:#111; color:#d4af37; padding:20px; border-radius:5px; margin:25px 0;">
+            <strong>REFLEXÃO ORIGINAL:</strong> 
+            A paz não é a ausência de barulho, é a presença de ordem. Para que a paz reine na sua <b>Família</b>, a ordem bíblica da submissão mútua e do perdão preventivo deve ser a base da engenharia doméstica.
+        </div>
+    </div>
+
+    <div class="nav">
+        <a href="1.html">RETORNAR AO ÍNDICE</a>
+    </div>
+</div>
+
+<script>
+    let synthesis = window.speechSynthesis;
+    let utterance;
+
+    function lerTexto() {
+        synthesis.cancel(); // Para qualquer leitura anterior
+        const texto = document.getElementById('texto-estudo').innerText;
+        utterance = new SpeechSynthesisUtterance(texto);
+        utterance.lang = 'pt-BR';
+        utterance.rate = 1.1; // Velocidade da leitura
+        synthesis.speak(utterance);
+    }
+
+    function pararLeitura() {
+        synthesis.cancel();
+    }
+</script>
+
+</body>
+</html>
