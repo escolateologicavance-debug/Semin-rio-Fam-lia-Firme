@@ -3,124 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#d63384">
-    <title>Curso para Casais</title>
+    <meta name="theme-color" content="#7b0000">
+    <title>Seminário Família Firme</title>
 
     <link rel="manifest" href="manifest.json">
     <link rel="icon" href="capa-192.png" type="image/png">
     <link rel="apple-touch-icon" href="capa-192.png">
 
     <style>
-        body {
-            font-family: sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-color: #fdf2f2;
-            margin: 0;
-            padding: 20px;
-        }
-
-        .container {
-            text-align: center;
-            width: 100%;
-            max-width: 350px;
-        }
-
-        .logo-image {
-            width: 100%;
-            border-radius: 15px;
-            margin-bottom: 20px;
-        }
-
-        h1 {
-            color: #d63384;
-            font-size: 24px;
-        }
-
-        input {
-            width: 100%;
-            padding: 15px;
-            margin-bottom: 15px;
-            border: 2px solid #ffc1e3;
-            border-radius: 10px;
-            box-sizing: border-box;
-            font-size: 16px;
-        }
-
-        #password {
-            border-radius: 30px;
-            text-align: center;
-        }
-
-        .heart-container {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-        }
-
-        .heart-button {
-            position: relative;
-            width: 100px;
-            height: 90px;
-            background-color: #d63384;
-            border: none;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: bold;
-            transition: transform 0.2s;
-            z-index: 1;
-        }
-
-        .heart-button:before, .heart-button:after {
-            content: "";
-            position: absolute;
-            top: 0;
-            width: 50px;
-            height: 80px;
-            border-radius: 50px 50px 0 0;
-            background: #d63384;
-        }
-
+        body { font-family: 'Georgia', serif; display: flex; flex-direction: column; align-items: center; background-color: #fdf2f2; margin: 0; padding: 20px; }
+        .container { text-align: center; width: 100%; max-width: 350px; margin-top: 30px; }
+        .logo-image { width: 100%; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); margin-bottom: 20px; }
+        h1 { color: #7b0000; font-size: 24px; text-transform: uppercase; letter-spacing: 1px; }
+        input { width: 100%; padding: 15px; margin-bottom: 15px; border: 2px solid #7b0000; border-radius: 30px; box-sizing: border-box; font-size: 16px; text-align: center; }
+        .heart-button { position: relative; width: 100px; height: 90px; background-color: #7b0000; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; transition: transform 0.2s; margin: 20px auto; z-index: 1; }
+        .heart-button:before, .heart-button:after { content: ""; position: absolute; top: 0; width: 50px; height: 80px; border-radius: 50px 50px 0 0; background: #7b0000; }
         .heart-button:before { left: 50px; transform: rotate(-45deg); transform-origin: 0 100%; }
         .heart-button:after { left: 0; transform: rotate(45deg); transform-origin: 100% 100%; }
-
-        .heart-button span {
-            position: relative;
-            z-index: 10;
-            font-size: 14px;
-        }
-
-        .error-msg {
-            color: red;
-            font-size: 14px;
-            display: none;
-            margin-top: 10px;
-        }
+        .heart-button span { position: relative; z-index: 10; font-size: 14px; }
+        .error-msg { color: red; font-size: 14px; display: none; margin-top: 10px; font-weight: bold; }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <img src="capa-192.png" alt="Curso para Casais" class="logo-image">
-        
+        <img src="capa-192.png" alt="Capa Família Firme" class="logo-image">
         <h1>Bem-vindos!</h1>
-
         <input type="text" id="name1" placeholder="Seu Nome">
         <input type="text" id="name2" placeholder="Nome dele(a)">
-        
-        <input type="password" id="password" placeholder="Senha">
-        
-        <div class="heart-container">
-            <button class="heart-button" onclick="checkLogin()">
-                <span>ACESSAR</span>
-            </button>
-        </div>
-        
-        <p id="error" class="error-msg">Acesso negado. Verifique os dados.</p>
+        <input type="password" id="password" placeholder="Senha de Acesso">
+        <button class="heart-button" onclick="checkLogin()"><span>ACESSAR</span></button>
+        <p id="error" class="error-msg">Acesso Negado. Verifique os dados.</p>
     </div>
 
     <script>
@@ -128,7 +41,6 @@
             const pass = document.getElementById('password').value;
             const n1 = document.getElementById('name1').value;
             const n2 = document.getElementById('name2').value;
-
             if (n1 && n2 && pass === "2026-itamt") {
                 localStorage.setItem('casal', n1 + " e " + n2);
                 window.location.href = "1.html";
@@ -136,7 +48,6 @@
                 document.getElementById('error').style.display = 'block';
             }
         }
-
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => { navigator.serviceWorker.register('sw.js'); });
         }
