@@ -185,10 +185,7 @@
     const TEMPO_TOTAL = 10 * 60; 
 
     function verificarAcesso() {
-        // --- LINHA DE TESTE (Remova antes de subir para o repositório oficial) ---
-        localStorage.removeItem('dinamica_inicio'); 
-        // -------------------------------------------------------------------------
-
+      
         if (localStorage.getItem('dinamica_inicio')) {
             document.getElementById('main-content').style.display = "block";
             document.getElementById('timer-bar').style.display = "block";
