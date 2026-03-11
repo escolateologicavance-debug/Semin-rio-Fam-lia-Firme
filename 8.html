@@ -185,63 +185,6 @@
     const TEMPO_TOTAL = 10 * 60; 
 
     function verificarAcesso() {
-        if (localStorage.getItem('dinamica_inicio')) {
-            document.getElementById('main-content').style.display = "block";
-            document.getElementById('timer-bar').style.display = "block";
-            iniciarCronometro();
-            return;
-        }
-
-        const acesso = prompt("CHAVE DE ACESSO DA DINÂMICA:");
-        if (acesso === senhaDinamica) {
-            localStorage.setItem('dinamica_inicio', Date.now()); 
-            document.getElementById('main-content').style.display = "block";
-            document.getElementById('timer-bar').style.display = "block";
-            iniciarCronometro();
-        } else {
-            alert("Senha incorreta!");
-            window.location.href = "1.html";
-        }
-    }
-
-    function validarNota(input) {
-        if(input.value > 1) input.value = 1;
-        if(input.value < 0) input.value = 0;
-    }
-
-    function iniciarCronometro() {
-        const timerDisplay = document.getElementById('time');
-        const inicio = parseInt(localStorage.getItem('dinamica_inicio'));
-
-        const interval = setInterval(() => {
-            const agora = Date.now();
-            const decorrido = Math.floor((agora - inicio) / 1000);
-            let restante = TEMPO_TOTAL - decorrido;
-
-            if (restante <= 0) {
-                clearInterval(interval);
-                timerDisplay.innerText = "00:00";
-                bloquearDinamica();
-                return;
-            }
-
-            let mins = Math.floor(restante / 60);
-            let segs = restante % 60;
-            timerDisplay.innerText = `${mins}:${segs < 10 ? '0' + segs : segs}`;
-        }, 1000);
-    }
-
-    function bloquearDinamica() {
-        document.querySelectorAll('input').forEach(i => i.disabled = true);
-        document.getElementById('btn-somar').style.display = "none";
-        document.getElementById('timer-bar').style.background = "#000";
-        document.getElementById('timer-bar').innerText = "TEMPO EXPIROU!";
-        alert("O tempo para esta família acabou!");
-<script>
-    const senhaDinamica = "familiarocha2026";
-    const TEMPO_TOTAL = 10 * 60; 
-
-    function verificarAcesso() {
         // --- LINHA DE TESTE (Remova antes de subir para o repositório oficial) ---
         localStorage.removeItem('dinamica_inicio'); 
         // -------------------------------------------------------------------------
@@ -328,6 +271,6 @@
         window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
     }
 </script>
-    
 </body>
 </html>
+
