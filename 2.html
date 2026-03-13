@@ -12,14 +12,11 @@
         h1 { color: #7b0000; border-bottom: 1px solid #ddd; padding-bottom: 10px; }
         h2 { color: #111; margin-top: 30px; border-left: 4px solid #d4af37; padding-left: 15px; }
         
-        /* Recursos de Mídia Estilo Hazaq */
         .media-bar { background: #eee; padding: 10px; display: flex; justify-content: center; gap: 10px; margin-bottom: 20px; border-radius: 4px; }
         .btn-media { background: white; border: 1px solid #ccc; padding: 8px 15px; cursor: pointer; display: flex; align-items: center; font-weight: bold; font-size: 13px; }
-        .btn-media:hover { background: #f0f0f0; }
+        .btn-media:active { background: #ddd; }
 
-        /* Widget VLibras Integrado */
         .libras-container { background: #f9f9f9; border: 1px solid #ddd; padding: 15px; margin: 20px 0; border-radius: 8px; text-align: center; }
-        
         .verso { background: #fff4f4; border-left: 6px solid #7b0000; padding: 25px; margin: 25px 0; font-style: italic; font-size: 18px; }
         .stats-box { background: #111; color: #d4af37; padding: 20px; margin: 25px 0; border-radius: 5px; font-size: 15px; }
         .citacao { border-left: 3px solid #ccc; padding-left: 20px; margin: 20px 0; color: #555; font-style: italic; }
@@ -31,75 +28,78 @@
 
 <header>
     SEMINÁRIO FAMÍLIA FIRME
-    <div class="sub">Formação Bíblica para a família Cristã</div>
+    <div class="sub">Formação Bíblica para a Casa Cristã</div>
 </header>
 
 <div class="container">
     <div class="media-bar">
-        <button class="btn-media" onclick="document.getElementById('audio-aula').play()">▶ OUVIR AULA</button>
-        <button class="btn-media" onclick="document.getElementById('audio-aula').pause()">⏹ PARAR</button>
+        <button class="btn-media" onclick="lerTexto()">▶ OUVIR AULA (Google)</button>
+        <button class="btn-media" onclick="pararLeitura()">⏹ PARAR</button>
     </div>
-    <audio id="audio-aula" src="audio/tema1.mp3"></audio>
 
     <h1>A Importância da Escuta e a Edificação da Casa</h1>
 
     <div class="libras-container">
         <div vw class="enabled">
             <div vw-access-button class="active"></div>
-            <div vw-plugin-wrapper>
-                <div class="vw-plugin-top-wrapper"></div>
-            </div>
+            <div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div>
         </div>
         <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
         <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
-        <p style="font-size: 12px; color: #666;">Acesse o conteúdo em LIBRAS clicando no widget lateral</p>
     </div>
 
-    <p>
-        O ser humano foi projetado com uma engenharia biológica e espiritual específica: possuímos dois ouvidos e apenas uma boca. 
-        Essa proporção não é acidental; somos, em nossa essência, seres ouvintes antes de sermos falantes. 
-        A perda dessa virtude é o prelúdio da ruína conjugal.
-    </p>
+    <div id="texto-estudo">
+        <p>
+            O ser humano foi projetado com uma engenharia biológica e espiritual específica: possuímos dois ouvidos e apenas uma boca. 
+            Essa proporção não é acidental; somos seres ouvintes antes de sermos falantes.
+        </p>
 
-    <div class="stats-box">
-        <strong>LEVANTAMENTO ESTATÍSTICO:</strong> Estudos recentes apontam que aproximadamente 65% das separações não ocorrem por falta de amor, 
-        mas por colapso comunicacional — a incapacidade de processar a alteridade do outro através da audição.
+        <div class="stats-box">
+            <strong>ESTATÍSTICA:</strong> 65% das separações ocorrem por colapso comunicacional — a incapacidade de ouvir o outro.
+        </div>
+
+        <div class="verso">
+            "Sabei isto, meus amados irmãos: todo homem seja pronto para ouvir, tardio para falar, tardio para se irar."
+            <br><br><strong>Tiago 1:19</strong>
+        </div>
+
+        <h2>1. A Perspectiva Psicanalítica</h2>
+        <p>
+            Como observou Lacan, o que se diz não é o que o outro ouve. Jung reforçava que o encontro de duas personalidades é uma reação química: sem escuta, não há transformação.
+        </p>
+
+        <div class="citacao">
+            "A primeira tarefa do amor é ouvir." — Augusto Cury
+        </div>
+
+        <h2>2. A Escuta como Dignidade</h2>
+        <p>
+            Para Max Lucado, ouvir é um gesto de generosidade. Silenciar o ego para acolher a fala do cônjuge é praticar a humildade cristã.
+        </p>
     </div>
-
-    <div class="verso">
-        "Sabei isto, meus amados irmãos: todo homem seja pronto para ouvir, tardio para falar, tardio para se irar."
-        <br><br><strong>Tiago 1:19</strong>
-        <br><a href="https://www.bibliaonline.com.br/acf/tg/1/19" target="_blank" style="color:#7b0000; font-size:14px;">[Estudar Hermenêutica Completa]</a>
-    </div>
-
-    <h2>1. A Perspectiva Psicanalítica e Filosófica</h2>
-    <p>
-        Como observou <strong>Lacan</strong>, o que se diz não é o que o outro ouve. No casamento, o ruído entre a fala e a escuta cria abismos. 
-        <strong>Jung</strong> reforçava que o encontro de duas personalidades é como o contato de duas substâncias químicas: se houver reação, ambos se transformam. 
-        Se não há escuta, não há reação, apenas coexistência estéril.
-    </p>
-
-    <div class="citacao">
-        "A primeira tarefa do amor é ouvir." — <strong>Augusto Cury</strong>
-    </div>
-
-    <h2>2. A Escuta como Reconhecimento da Dignidade</h2>
-    <p>
-        Para <strong>Max Lucado</strong>, o ato de ouvir é o supremo gesto de generosidade. Quando silenciamos o nosso ego para acolher a fala do cônjuge, 
-        estamos praticando a humildade cristã em sua forma mais pura. A falta de escuta gera o que <strong>Freud</strong> descreveria como o narcisismo das pequenas diferenças: 
-        onde cada um só ouve o eco de seus próprios desejos.
-    </p>
-
-    <h2>3. Consequências da Surdez Espiritual Conjugal</h2>
-    <ul>
-        <li><strong>Somatização:</strong> O que a boca não fala e o outro não ouve, o corpo transforma em doença.</li>
-        <li><strong>Ruptura da Intimidade:</strong> Sem escuta, o sexo torna-se mecânico e a alma torna-se solitária acompanhada.</li>
-        <li><strong>Desmoronamento da Casa:</strong> Uma casa edificada sobre monólogos é uma casa construída sobre a areia.</li>
-    </ul>
 
     <div class="nav">
         <a href="1.html">RETORNAR AO ÍNDICE</a>
     </div>
 </div>
+
+<script>
+    let synthesis = window.speechSynthesis;
+    let utterance;
+
+    function lerTexto() {
+        synthesis.cancel(); 
+        const texto = document.getElementById('texto-estudo').innerText;
+        utterance = new SpeechSynthesisUtterance(texto);
+        utterance.lang = 'pt-BR';
+        utterance.rate = 1.1;
+        synthesis.speak(utterance);
+    }
+
+    function pararLeitura() {
+        synthesis.cancel();
+    }
+</script>
+
 </body>
 </html>
