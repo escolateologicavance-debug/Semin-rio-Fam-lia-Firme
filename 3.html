@@ -12,14 +12,11 @@
         h1 { color: #7b0000; border-bottom: 1px solid #ddd; padding-bottom: 10px; }
         h2 { color: #111; margin-top: 30px; border-left: 4px solid #d4af37; padding-left: 15px; }
         
-        /* Recursos de Mídia Estilo Hazaq */
         .media-bar { background: #eee; padding: 10px; display: flex; justify-content: center; gap: 10px; margin-bottom: 20px; border-radius: 4px; }
         .btn-media { background: white; border: 1px solid #ccc; padding: 8px 15px; cursor: pointer; display: flex; align-items: center; font-weight: bold; font-size: 13px; }
-        .btn-media:hover { background: #f0f0f0; }
+        .btn-media:active { background: #ddd; }
 
-        /* Widget VLibras Integrado */
         .libras-container { background: #f9f9f9; border: 1px solid #ddd; padding: 15px; margin: 20px 0; border-radius: 8px; text-align: center; }
-        
         .verso { background: #fff4f4; border-left: 6px solid #7b0000; padding: 25px; margin: 25px 0; font-style: italic; font-size: 18px; }
         .stats-box { background: #111; color: #d4af37; padding: 20px; margin: 25px 0; border-radius: 5px; font-size: 15px; }
         .citacao { border-left: 3px solid #ccc; padding-left: 20px; margin: 20px 0; color: #555; font-style: italic; }
@@ -36,10 +33,9 @@
 
 <div class="container">
     <div class="media-bar">
-        <button class="btn-media" onclick="document.getElementById('audio-aula').play()">▶ OUVIR AULA</button>
-        <button class="btn-media" onclick="document.getElementById('audio-aula').pause()">⏹ PARAR</button>
+        <button class="btn-media" onclick="lerTexto()">▶ OUVIR AULA (Google)</button>
+        <button class="btn-media" onclick="pararLeitura()">⏹ PARAR</button>
     </div>
-    <audio id="audio-aula" src="audio/tema2.mp3"></audio>
 
     <h1>Linguagens do Amor: A Dialética da Entrega</h1>
 
@@ -50,59 +46,66 @@
         </div>
         <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
         <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
-        <p style="font-size: 12px; color: #666;">Acesse o conteúdo em LIBRAS clicando no widget lateral</p>
     </div>
 
-    <p>
-        O amor não é um monólito emocional, mas uma linguagem que exige tradução constante. Como seres biopsicossociais, carregamos "tanques emocionais" que são abastecidos por canais distintos. 
-        A tragédia de muitas <strong>Casas</strong> é a tentativa de amar o outro na língua que eu mesmo falo, ignorando que o cônjuge pode ser estrangeiro em meu sistema de afetos.
-    </p>
+    <div id="texto-estudo">
+        <p>
+            O amor não é um monólito emocional, mas uma linguagem que exige tradução constante. Como seres biopsicossociais, carregamos "tanques emocionais" que são abastecidos por canais distintos. 
+        </p>
 
-    <div class="stats-box">
-        <strong>ANÁLISE COMPORTAMENTAL:</strong> Dados de aconselhamento familiar indicam que 70% dos casais que se sentem "desamados" possuem parceiros que estão se esforçando, porém, na linguagem errada. É o esforço sem eficácia que gera o esgotamento do vínculo.
-    </div>
+        <div class="stats-box">
+            <strong>ANÁLISE COMPORTAMENTAL:</strong> 70% dos casais que se sentem "desamados" possuem parceiros que estão se esforçando, porém, na linguagem errada.
+        </div>
 
-    <div class="verso">
-        "Meus filhinhos, não amemos de palavra, nem de língua, mas por obra e em verdade."
-        <br><br><strong>1 João 3:18</strong>
-        <br><a href="https://www.bibliaonline.com.br/acf/1jo/3/18" target="_blank" style="color:#7b0000; font-size:14px;">[Estudar Hermenêutica Completa]</a>
-    </div>
+        <div class="verso">
+            "Meus filhinhos, não amemos de palavra, nem de língua, mas por obra e em verdade."
+            <br><br><strong>1 João 3:18</strong>
+        </div>
 
-    <h2>1. A Perspectiva de Gary Chapman e a Psiquiatria</h2>
-    <p>
-        <strong>Gary Chapman</strong> identificou as cinco linguagens (Palavras de Afirmação, Tempo de Qualidade, Presentes, Atos de Serviço e Toque Físico). 
-        Na visão de <strong>Viktor Frankl</strong>, o amor é a única via para chegar ao núcleo da personalidade de outrem. Sem a "chave" da linguagem correta, o acesso a esse núcleo é barrado por defesas psíquicas. 
-        Se o toque é a linguagem e o outro oferece serviço, a necessidade límbica de conexão não é atingida.
-    </p>
+        <h2>1. A Perspectiva de Gary Chapman e a Psiquiatria</h2>
+        <p>
+            Gary Chapman identificou as cinco linguagens: Palavras de Afirmação, Tempo de Qualidade, Presentes, Atos de Serviço e Toque Físico. Na visão de Viktor Frankl, o amor é a única via para chegar ao núcleo da personalidade de outrem.
+        </p>
 
-    <div class="citacao">
-        "O amor é um ato de fé e quem tiver pouca fé também terá pouco amor." — <strong>Erich Fromm</strong>
-    </div>
+        <div class="citacao">
+            "O amor é um ato de fé e quem tiver pouca fé também terá pouco amor." — Erich Fromm
+        </div>
 
-    <h2>2. A Escassez no Pós-Modernismo</h2>
-    <p>
-        Como alerta <strong>Zygmunt Bauman</strong> em "Amor Líquido", vivemos em uma era de conexões voláteis. O aprendizado da linguagem do cônjuge é o antídoto contra essa liquidez. 
-        <strong>Max Lucado</strong> complementa que o amor deve ser "um compromisso, não um sentimento". Esse compromisso se manifesta no esforço cognitivo de aprender um novo dialeto afetivo para edificar a <strong>Casa</strong>.
-    </p>
+        <h2>2. A Escassez no Pós-Modernismo</h2>
+        <p>
+            Como alerta Zygmunt Bauman, vivemos em uma era de conexões voláteis. O aprendizado da linguagem do cônjuge é o antídoto contra essa liquidez. Max Lucado complementa que o amor deve ser um compromisso.
+        </p>
 
-    <h2>3. A Patologia do "Amor Egoísta"</h2>
-    <p>
-        <strong>Freud</strong> postularia que o narcisismo impede a percepção da necessidade alheia. No casamento:
-    </p>
-    <ul>
-        <li><strong>Projeção:</strong> Eu dou o que eu gostaria de receber, ignorando a alteridade.</li>
-        <li><strong>Fome Emocional:</strong> Um cônjuge desnutrido emocionalmente torna-se reativo e vulnerável a distrações externas.</li>
-        <li><strong>Entropia Conjugal:</strong> Quando os tanques secam, a estrutura da família perde o vigor espiritual.</li>
-    </ul>
-
-    <div class="exercicio" style="background:#f4f4f4; padding:20px; border-radius:10px; border:1px solid #ddd;">
-        <h3 style="margin-top:0; color:#7b0000;">Exercício Diagnóstico</h3>
-        <p>Identifiquem sem pressa: Qual das 5 linguagens faz seus olhos brilharem? Agora, perguntem: Qual linguagem meu cônjuge tem tentado falar comigo que eu não tenho valorizado?</p>
+        <h2>3. A Patologia do Amor Egoísta</h2>
+        <ul>
+            <li><strong>Projeção:</strong> Eu dou o que eu gostaria de receber.</li>
+            <li><strong>Fome Emocional:</strong> Um cônjuge desnutrido torna-se reativo.</li>
+            <li><strong>Entropia Conjugal:</strong> Quando os tanques secam, a estrutura perde o vigor.</li>
+        </ul>
     </div>
 
     <div class="nav">
         <a href="1.html">RETORNAR AO ÍNDICE</a>
     </div>
 </div>
+
+<script>
+    let synthesis = window.speechSynthesis;
+    let utterance;
+
+    function lerTexto() {
+        synthesis.cancel(); 
+        const texto = document.getElementById('texto-estudo').innerText;
+        utterance = new SpeechSynthesisUtterance(texto);
+        utterance.lang = 'pt-BR';
+        utterance.rate = 1.1; 
+        synthesis.speak(utterance);
+    }
+
+    function pararLeitura() {
+        synthesis.cancel();
+    }
+</script>
+
 </body>
 </html>
