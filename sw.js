@@ -9,7 +9,7 @@ const assets = [
   '6.html',
   '7.html',
   '8.html',
-  '1000301044.png',
+  'imagem-512.png',
   'capa-192.png', 
   'capa-512.png', 
   'manifest.json'
